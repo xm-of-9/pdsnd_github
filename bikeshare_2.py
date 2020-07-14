@@ -2,6 +2,7 @@
 # https://www.shanelynn.ie/using-pandas-dataframe-creating-editing-viewing-data-in-python/
 # https://www.datacamp.com/community/tutorials/pandas-read-csv
 # https://www.w3schools.com/python/python_try_except.asp
+# https://towardsdatascience.com/
 
 import time
 import pandas as pd
@@ -11,6 +12,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
+# The following option provides the user with a filter to select the respective city to look at
 
 def get_filters():
     """
@@ -57,6 +59,7 @@ def get_filters():
     print('-'*40)
     return city, month, day
 
+# loads the city data from the .csv files
 
 def load_data(city, month, day):
 
@@ -113,6 +116,7 @@ def time_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+# Calculating the respective statistics
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
